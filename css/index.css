@@ -134,3 +134,32 @@ table {
   border-spacing: 0;
 }
 /* Your Code Goes Here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #98a3ae;
+}
+.header-container .menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.header-container .btn-hide {
+  display: none;
+}
+.header-container .hide-content {
+  display: none;
+}
+@desktop (min-width: 500px);
+body {
+  width: 100%;
+}
