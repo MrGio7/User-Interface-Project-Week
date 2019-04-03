@@ -138,20 +138,30 @@ table {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   background-color: #98a3ae;
+  padding: 10px;
 }
 .header-container .menu-content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+.header-container .menu-content .dropdown-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.header-container .menu-content :hover {
+  color: brown;
 }
 .header-container .btn-hide {
   display: none;
@@ -159,7 +169,30 @@ table {
 .header-container .hide-content {
   display: none;
 }
-@desktop (min-width: 500px);
+.home {
+  position: relative;
+  color: grey;
+}
+.home .home-img {
+  width: 100%;
+  max-height: 100vh;
+}
+.home .bottom-left {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: white;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
 body {
+  width: 100%;
+}
+h1 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+}
+.container {
   width: 100%;
 }
