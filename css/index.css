@@ -187,6 +187,7 @@ table {
 .content {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 .content .content-img {
   width: 100%;
@@ -317,9 +318,34 @@ table {
   margin: 4px 2px;
   cursor: pointer;
 }
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.tabs .tab {
+  margin-top: 25px;
+  padding: 15px 20vw;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tabs .tab:hover {
+  background-color: #5e9fb9;
+  color: white;
+}
+.tabs .active-tab {
+  background-color: #5e9fb9;
+  color: white;
+  border: 2px solid black;
+}
 body {
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
 }
 h1 {
   font-size: 1.6rem;
