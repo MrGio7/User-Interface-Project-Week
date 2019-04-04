@@ -168,64 +168,142 @@ table {
 .header-container .hide-content {
   display: none;
 }
-.home {
-  position: relative;
+@media (min-width: 500px) {
+  .header-container {
+    padding: 13px 84px;
+  }
 }
-.home .home-img {
-  width: 100%;
-  max-height: 30vh;
+.home {
+  background-image: url('../img/home/home-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
 }
 .home .bottom-left {
-  position: absolute;
-  bottom: 25px;
-  left: 14px;
-  line-height: 1.1;
+  padding: 70px 0 35px 15px;
   color: white;
   font-size: 2.4rem;
   font-weight: bold;
 }
+@media (min-width: 500px) {
+  .home {
+    background-image: url('../img/home/home-jumbotron.png');
+  }
+  .home .bottom-left {
+    padding: 277px 0 40px 85px;
+    line-height: 1.2;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
 .content {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-}
-.content .content-img {
-  width: 100%;
   padding: 30px 15px;
+}
+.content .image1 {
+  content: url('../img/home/home-mobile-img-1.png');
+}
+.content .image2 {
+  content: url('../img/home/home-mobile-img-2.png');
+}
+.content div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
 }
 .content .learn-more {
   text-decoration: none;
+  text-align: center;
   color: black;
-  margin: 10px auto;
+  margin-top: 20px;
   padding: 15px 30%;
   border: 1px solid black;
 }
-.content .hidden {
-  display: none;
+@media (min-width: 500px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .content .image1 {
+    content: url('../img/home/home-img-1.png');
+  }
+  .content .image2 {
+    content: url('../img/home/home-img-2.png');
+  }
+  .content div {
+    padding: 20px 0;
+    width: 45%;
+  }
+  .content .first {
+    order: -1;
+  }
+  .content .learn-more {
+    padding: 15px 30px;
+    width: 40%;
+  }
 }
 .recent-projects {
-  margin-top: 30px;
+  margin-top: 15px;
+  padding: 0;
 }
-.recent-projects h2 {
-  padding-bottom: 0;
+.recent-projects .villas {
+  content: url('../img/home/home-mobile-villas-img.png');
 }
-.recent-projects .recents-img {
-  margin-top: 25px;
+.recent-projects .outskirts {
+  content: url('../img/home/home-mobile-outskirts-img.png');
+}
+.recent-projects .blocks {
+  content: url('../img/home/home-mobile-the-blocks-img.png');
 }
 .recent-projects .sticker {
   font-size: 1.5rem;
+  text-align: center;
   letter-spacing: 0.5rem;
   background-color: lightgrey;
-  margin: -15px auto;
-  padding: 30px 12%;
+  width: 85%;
+  align-self: center;
+  margin-top: -25px;
+  padding: 30px 0;
 }
 .recent-projects p {
   margin-top: 30px;
   font-size: 1.1rem;
+  padding: 0 15px;
+}
+@media (min-width: 500px) {
+  .recent-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-projects .villas {
+    content: url('../img/home/home-villas-img.png');
+  }
+  .recent-projects .outskirts {
+    content: url('../img/home/home-outskirts-img.png');
+  }
+  .recent-projects .blocks {
+    content: url('../img/home/home-the-blocks-img.png');
+  }
+  .recent-projects div {
+    width: 90%;
+  }
+  .recent-projects .sticker {
+    margin-left: 45%;
+    margin-top: -70px;
+    width: 35%;
+  }
 }
 .footer-content {
   margin-top: 40px;
   background-color: #828282;
+  display: flex;
+  flex-direction: column;
 }
 .footer-content h1 {
   font-size: 1.2rem;
@@ -243,12 +321,30 @@ table {
   color: white;
   font-size: 0.7rem;
   margin-top: 10px;
+  padding-left: 15px;
 }
 .footer-content address {
   font-size: 0.8rem;
   color: white;
   padding-left: 15px;
   line-height: 1.8;
+}
+@media (min-width: 500px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.copyright {
+  background-color: #828282;
+  color: white;
+  font-size: 0.8rem;
+  padding: 15px;
+}
+@media (min-width: 500px) {
+  .copyright {
+    text-align: center;
+  }
 }
 .contact-header {
   position: relative;
@@ -370,16 +466,12 @@ h2 {
   color: black;
   font-size: 1.4rem;
   font-weight: bold;
-  padding-left: 15px;
-  padding-bottom: 30px;
 }
 h3 {
   color: black;
   font-size: 1.1rem;
-  padding: 15px 0 15px 15px;
 }
 p {
   font-size: 1rem;
-  padding: 0 15px;
   line-height: 1.6;
 }

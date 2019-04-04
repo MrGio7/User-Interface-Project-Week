@@ -1,20 +1,26 @@
 .home{
-    position: relative;
-
-    .home-img{
-        width: 100%;
-        max-height: 30vh;
-    }
+    background-image: url('../img/home/home-mobile-jumbotron.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
 
     .bottom-left{
-    position: absolute;
-    bottom: 25px;
-    left: 14px;
-    line-height: 1.1;
-
+    padding: 70px 0 35px 15px;
     color:white;
     font-size:2.4rem;
     font-weight: bold;
+    }
+
+    @media @desktop{
+        background-image: url('../img/home/home-jumbotron.png');
+
+        .bottom-left{
+            padding: 277px 0 40px 85px;
+            line-height: 1.2;
+            color:white;
+            font-size:4rem;
+            font-weight: bold;
+            }
     }
 }
 
@@ -22,50 +28,99 @@
 .content{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    padding: 30px 15px;
+    
 
-    .content-img{
+    .image1{ content: url('../img/home/home-mobile-img-1.png')}
+    .image2{ content: url('../img/home/home-mobile-img-2.png')}
+
+    div{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        padding: 30px 15px;
+        padding: 10px 0;
     }
 
     .learn-more{
-
         text-decoration: none;
+        text-align: center;
         color:black;
-
-        margin:10px auto;
+        margin-top:20px;
         padding: 15px 30%;
         border:1px solid black;
     }
 
-    .hidden{
-        display: none;
+    @media @desktop{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .image1{ content: url('../img/home/home-img-1.png')}
+        .image2{ content: url('../img/home/home-img-2.png')}
+
+        div{
+            padding: 20px 0;
+            width: 45%;
+        }
+
+        .first{
+            order:-1;
+        }
+
+        .learn-more{
+            padding: 15px 30px;
+            width: 40%;
+        }
+
+
     }
 }
 
 .recent-projects{
-    margin-top:30px;
+    margin-top:15px;
+    padding:0;
 
-    h2{
-        padding-bottom: 0;
-    }
+    .villas{content: url('../img/home/home-mobile-villas-img.png')}
+    .outskirts{ content: url('../img/home/home-mobile-outskirts-img.png')}
+    .blocks{content: url('../img/home/home-mobile-the-blocks-img.png')}
 
-    .recents-img{
-        margin-top:25px;
-    }
-
+  
     .sticker{
         font-size: 1.5rem;
+        text-align: center;
         letter-spacing: 0.5rem;
 
         background-color: lightgrey;
-        margin:-15px auto;
-        padding: 30px 12%;
+        width: 85%;
+        align-self: center;
+        margin-top: -25px;
+        padding: 30px 0;
     }
 
     p{
         margin-top:30px;
         font-size: 1.1rem;
+        padding:0 15px;
+    }
+
+    @media @desktop{
+        display: flex;
+        flex-direction: column;
+
+        .villas{content: url('../img/home/home-villas-img.png')}
+        .outskirts{ content: url('../img/home/home-outskirts-img.png')}
+        .blocks{content: url('../img/home/home-the-blocks-img.png')}
+
+        div{
+            width: 90%;
+        }
+
+        .sticker{
+            margin-left: 45%;
+            margin-top:-70px;
+            width: 35%;
+        }
     }
 }
