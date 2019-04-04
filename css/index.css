@@ -170,7 +170,6 @@ table {
 }
 .home {
   position: relative;
-  color: grey;
 }
 .home .home-img {
   width: 100%;
@@ -246,6 +245,22 @@ table {
   color: white;
   padding-left: 15px;
   line-height: 1.8;
+}
+.contact-header {
+  position: relative;
+}
+.contact-header .contact-img {
+  width: 100%;
+  max-height: 30vh;
+}
+.contact-header .bottom-left {
+  position: absolute;
+  bottom: 25px;
+  left: 14px;
+  line-height: 1.1;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 body {
   width: 100%;
