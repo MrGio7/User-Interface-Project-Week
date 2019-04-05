@@ -347,31 +347,40 @@ table {
   }
 }
 .contact-header {
-  position: relative;
-}
-.contact-header .contact-img {
-  width: 100%;
-  max-height: 32vh;
+  background-image: url('../img/contact/contact-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
 }
 .contact-header .bottom-left {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  line-height: 1.1;
+  padding: 150px 0 25px 5px;
   color: white;
   font-size: 2.4rem;
   font-weight: bold;
+}
+@media (min-width: 500px) {
+  .contact-header {
+    background-image: url('../img/contact/contact-jumbotron.png');
+  }
+  .contact-header .bottom-left {
+    padding: 130px 0 5px 82px;
+    font-size: 4rem;
+  }
+}
+.main-content {
+  padding: 10px 15px;
 }
 .main-content h1 {
   color: black;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 25px 15px 10px 15px;
+  padding: 25px 0 10px 0;
 }
 .main-content h2 {
-  padding-top: 30px;
+  padding: 30px 0;
 }
 .main-content h3 {
+  padding: 30px 0 15px 0;
   line-height: 1.5;
 }
 .main-content p {
@@ -381,14 +390,13 @@ table {
 .main-content address {
   font-size: 1rem;
   color: black;
-  padding-left: 15px;
   line-height: 1.8;
 }
 .main-content input {
   display: flex;
   margin: 0 auto;
-  width: 90%;
-  padding: 15px 10px;
+  width: 100%;
+  padding: 15px 0;
   border-radius: 5px;
 }
 .main-content textarea {
@@ -398,7 +406,7 @@ table {
   border-radius: 5px;
 }
 .main-content form {
-  padding: 20px 0 0 20px;
+  padding-top: 20px;
 }
 .main-content .checkbox {
   display: inline-flex;
@@ -416,6 +424,14 @@ table {
   font-size: 1.3rem;
   margin: 4px 2px;
   cursor: pointer;
+}
+@media (min-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30 75px;
+  }
 }
 .tabs {
   display: flex;
