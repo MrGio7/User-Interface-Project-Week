@@ -1,12 +1,11 @@
 .tabs{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    padding: 0 25px;
 
     .tab{
         margin-top:25px;
-        padding:15px 20vw;
+        padding:15px 0;
         text-align: center;
         border:1px solid black;
 
@@ -26,16 +25,73 @@
         color:white;
         border:2px solid black;
     }
+
+    @media @desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 85px;
+
+        .tab{
+            padding: 15px 35px;;
+        }
+    }
 }
 
 .tab-content{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    padding: 30px 15px;
 
-    .content-img{
-        width: 100%;
-        padding: 30px 15px;
+    .tab-img1{content: url('../img/services/services-tab-mobile-pre-construction-img.png')}
+    .tab-img2{content: url('../img/services/services-tab-mobile-construction-img.png')}
+    .tab-img3{content: url('../img/services/services-tab-mobile-design-build-img.png')}
+    .tab-img4{content: url('../img/services/services-tab-mobile-sustainability-img.png')}
+
+    p{
+        margin-bottom: 15px;
+    }
+
+    @media @desktop{
+        flex-direction: row;
+        padding: 30px 85px;
+    
+    .tab-head1::before{
+        content: 'Pre-Construction';
+        padding:0 20px;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .tab-head2::before{
+        content: 'Construction';
+        padding:0 20px;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .tab-head3::before{
+        content: 'Design Build';
+        padding:0 20px;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .tab-head4::before{
+        content: 'Sustainability';
+        padding:0 20px;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+
+    .tab-img1{content: url('../img/services/services-tab-pre-construction-img.png')}
+    .tab-img2{content: url('../img/services/services-tab-construction-img.png')}
+    .tab-img3{content: url('../img/services/services-tab-design-build-img.png')}
+    .tab-img4{content: url('../img/services/services-tab-sustainability-img.png')}
+
+    p{
+        padding:20px 20px;
+    }
     }
 }
 
