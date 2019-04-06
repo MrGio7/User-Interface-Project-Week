@@ -1,1 +1,589 @@
-/* Should be empty until you compile your LESS */
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Your Code Goes Here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #98a3ae;
+  padding: 10px;
+}
+.header-container .menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.header-container .menu-content .dropdown-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.header-container .menu-content :hover {
+  color: brown;
+}
+.header-container .btn-hide {
+  display: none;
+}
+.header-container .hide-content {
+  display: none;
+}
+@media (min-width: 500px) {
+  .header-container {
+    padding: 13px 84px;
+  }
+}
+.home {
+  background-image: url('../img/home/home-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+.home .bottom-left {
+  padding: 70px 0 35px 15px;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  .home {
+    background-image: url('../img/home/home-jumbotron.png');
+  }
+  .home .bottom-left {
+    padding: 277px 0 40px 85px;
+    line-height: 1.2;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+.content .image1 {
+  content: url('../img/home/home-mobile-img-1.png');
+}
+.content .image2 {
+  content: url('../img/home/home-mobile-img-2.png');
+}
+.content div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+.content .learn-more {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+  padding: 15px 30%;
+  border: 1px solid black;
+}
+@media (min-width: 500px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .content .image1 {
+    content: url('../img/home/home-img-1.png');
+  }
+  .content .image2 {
+    content: url('../img/home/home-img-2.png');
+  }
+  .content div {
+    padding: 20px 0;
+    width: 45%;
+  }
+  .content .first {
+    order: -1;
+  }
+  .content .learn-more {
+    padding: 15px 30px;
+    width: 40%;
+  }
+}
+.recent-projects {
+  margin-top: 15px;
+  padding: 0;
+}
+.recent-projects .villas {
+  content: url('../img/home/home-mobile-villas-img.png');
+}
+.recent-projects .outskirts {
+  content: url('../img/home/home-mobile-outskirts-img.png');
+}
+.recent-projects .blocks {
+  content: url('../img/home/home-mobile-the-blocks-img.png');
+}
+.recent-projects .sticker {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  background-color: lightgrey;
+  width: 85%;
+  align-self: center;
+  margin-top: -25px;
+  padding: 30px 0;
+}
+.recent-projects p {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  padding: 0 15px;
+}
+@media (min-width: 500px) {
+  .recent-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-projects .villas {
+    content: url('../img/home/home-villas-img.png');
+  }
+  .recent-projects .outskirts {
+    content: url('../img/home/home-outskirts-img.png');
+  }
+  .recent-projects .blocks {
+    content: url('../img/home/home-the-blocks-img.png');
+  }
+  .recent-projects div {
+    width: 90%;
+  }
+  .recent-projects .sticker {
+    margin-left: 45%;
+    margin-top: -70px;
+    width: 35%;
+  }
+}
+.footer-content {
+  margin-top: 40px;
+  background-color: #828282;
+  display: flex;
+  flex-direction: column;
+}
+.footer-content h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 25px 15px 10px 15px;
+}
+.footer-content input {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.footer-content p {
+  color: white;
+  font-size: 0.7rem;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+.footer-content address {
+  font-size: 0.8rem;
+  color: white;
+  padding-left: 15px;
+  line-height: 1.8;
+}
+@media (min-width: 500px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.copyright {
+  background-color: #828282;
+  color: white;
+  font-size: 0.8rem;
+  padding: 15px;
+}
+@media (min-width: 500px) {
+  .copyright {
+    text-align: center;
+  }
+}
+.contact-header {
+  background-image: url('../img/contact/contact-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+.contact-header .bottom-left {
+  padding: 150px 0 25px 5px;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  .contact-header {
+    background-image: url('../img/contact/contact-jumbotron.png');
+  }
+  .contact-header .bottom-left {
+    padding: 130px 0 5px 82px;
+    font-size: 4rem;
+  }
+}
+.main-content {
+  padding: 10px 15px;
+}
+.main-content h1 {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 25px 0 10px 0;
+}
+.main-content h2 {
+  padding: 30px 0;
+}
+.main-content h3 {
+  padding: 30px 0 15px 0;
+  line-height: 1.5;
+}
+.main-content p {
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+.main-content address {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.8;
+}
+.main-content input {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+.main-content textarea {
+  display: flex;
+  margin: 0 auto;
+  max-width: 80vw;
+  border-radius: 5px;
+}
+.main-content form {
+  padding-top: 20px;
+}
+.main-content .checkbox {
+  display: inline-flex;
+  width: 30px;
+  margin: 0 10px 15px 0;
+  background-color: white;
+}
+.main-content .submit-btn {
+  border: 1px solid black;
+  background-color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+@media (min-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30 75px;
+  }
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+}
+.tabs .tab {
+  margin-top: 25px;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tabs .tab:hover {
+  background-color: #5e9fb9;
+  color: white;
+}
+.tabs .active-tab {
+  background-color: #5e9fb9;
+  color: white;
+  border: 2px solid black;
+}
+@media (min-width: 500px) {
+  .tabs {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 85px;
+  }
+  .tabs .tab {
+    padding: 15px 35px;
+  }
+}
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+.tab-content .tab-img1 {
+  content: url('../img/services/services-tab-mobile-pre-construction-img.png');
+}
+.tab-content .tab-img2 {
+  content: url('../img/services/services-tab-mobile-construction-img.png');
+}
+.tab-content .tab-img3 {
+  content: url('../img/services/services-tab-mobile-design-build-img.png');
+}
+.tab-content .tab-img4 {
+  content: url('../img/services/services-tab-mobile-sustainability-img.png');
+}
+.tab-content p {
+  margin-bottom: 15px;
+}
+@media (min-width: 500px) {
+  .tab-content {
+    flex-direction: row;
+    padding: 30px 85px;
+  }
+  .tab-content .tab-head1::before {
+    content: 'Pre-Construction';
+    padding: 0 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .tab-content .tab-head2::before {
+    content: 'Construction';
+    padding: 0 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .tab-content .tab-head3::before {
+    content: 'Design Build';
+    padding: 0 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .tab-content .tab-head4::before {
+    content: 'Sustainability';
+    padding: 0 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .tab-content .tab-img1 {
+    content: url('../img/services/services-tab-pre-construction-img.png');
+  }
+  .tab-content .tab-img2 {
+    content: url('../img/services/services-tab-construction-img.png');
+  }
+  .tab-content .tab-img3 {
+    content: url('../img/services/services-tab-design-build-img.png');
+  }
+  .tab-content .tab-img4 {
+    content: url('../img/services/services-tab-sustainability-img.png');
+  }
+  .tab-content p {
+    padding: 20px 20px;
+  }
+}
+.hidden {
+  display: none;
+}
+.services-header {
+  background-image: url('../img/services/services-mobile-jumbotron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+.services-header .bottom-left {
+  padding: 150px 0 25px 15px;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  .services-header {
+    background-image: url('../img/services/services-jumbotron.png');
+  }
+  .services-header .bottom-left {
+    padding: 113px 0 23px 83px;
+    font-size: 4rem;
+  }
+}
+.services-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+@media (min-width: 500px) {
+  .services-content {
+    padding: 50px 90px;
+  }
+}
+body {
+  width: 100%;
+  font-family: 'Roboto';
+}
+h1 {
+  font-size: 1.6rem;
+  color: white;
+}
+h2 {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+h3 {
+  color: black;
+  font-size: 1.1rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,32 @@
+.services-header{
+    background-image: url('../img/services/services-mobile-jumbotron.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+
+    .bottom-left{
+        padding:150px 0 25px 15px;
+        color:white;
+        font-size:2.4rem;
+        font-weight: bold;
+        }
+
+        @media @desktop{
+            background-image: url('../img/services/services-jumbotron.png');
+
+            .bottom-left{
+                padding:113px 0 23px 83px;
+                font-size:4rem;
+            }
+        }
+}
+
+.services-content{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+
+    @media @desktop{
+        padding: 50px 90px;
+    }
+}
